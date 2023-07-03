@@ -7,9 +7,7 @@
         <?php
             require_once("./data/db.php");
         ?>
-        <title>
-            <?php echo $animal_type1 -> getName(); ?>
-        </title>
+        <title>Il mio shop</title>
     </head>
 
     <body>
@@ -58,7 +56,7 @@
                         Tipo di articolo: <b><?php echo $animal_type2 -> getProductType() -> getType(); ?></b>
                     </div>
                     <div class="icona_categoria">
-                        <img src="<?php echo $animal_type2 -> getProductType() -> getCategoryIcon();?>" alt="icona categoria - cibo">
+                        <img src="<?php echo $animal_type2 -> getProductType() -> getCategoryIcon();?>" alt="icona categoria - gioco">
                     </div>
                     <div>
                         Categoria: <b><?php echo $animal_type2 -> getCategory();?></b>
@@ -83,7 +81,7 @@
                         Tipo di articolo: <b><?php echo $animal_type3 -> getProductType() -> getType(); ?></b>
                     </div>
                     <div class="icona_categoria">
-                        <img src="<?php echo $animal_type3 -> getProductType() -> getCategoryIcon();?>" alt="icona categoria - cibo">
+                        <img src="<?php echo $animal_type3 -> getProductType() -> getCategoryIcon();?>" alt="icona categoria - accessorio">
                     </div>
                     <div>
                         Categoria: <b><?php echo $animal_type3 -> getCategory();?></b>
@@ -108,7 +106,7 @@
                         Tipo di articolo: <b><?php echo $animal_type4 -> getProductType() -> getType(); ?></b>
                     </div>
                     <div class="icona_categoria">
-                        <img src="<?php echo $animal_type4 -> getProductType() -> getCategoryIcon();?>" alt="icona categoria - cibo">
+                        <img src="<?php echo $animal_type4 -> getProductType() -> getCategoryIcon();?>" alt="icona categoria - cuccia">
                     </div>
                     <div>
                         Categoria: <b><?php echo $animal_type4 -> getCategory();?></b>
