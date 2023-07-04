@@ -14,35 +14,37 @@
         <div class="container">
             <?php
                 foreach ($ProductTypes as $ProductType) {
+                    if ($ProductType <> null) {
             ?>
-                    <div class="card">
-                        <div class="immagine">
-                            <img src="<?php echo $ProductType -> getImage();?>" alt="croccantini">  
-                        </div>
-                        <div class="info">
-                            <div class="titolo_prezzo">
-                                <h2>
-                                    <?php echo $ProductType -> getName(); ?>
-                                </h2>
-                                <div class="prezzo">
-                                    <?php echo $ProductType -> getPrice(); ?>
+                        <div class="card">
+                            <div class="immagine">
+                                <img src="<?php echo $ProductType -> getImage();?>" alt="croccantini">  
+                            </div>
+                            <div class="info">
+                                <div class="titolo_prezzo">
+                                    <h2>
+                                        <?php echo $ProductType -> getName(); ?>
+                                    </h2>
+                                    <div class="prezzo">
+                                        <?php echo $ProductType -> getPrice(); ?> Euro
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                Tipo di articolo: <b><?php echo $ProductType -> getType(); ?></b><br>
-                                Colore: <b><?php echo $ProductType -> getColor(); ?></b>
-                            </div>
-                            <div class="icona_categoria">
                                 <div>
-                                    <img src="<?php echo $ProductType -> getAnimalType() -> getCategoryIcon();?>" alt="icona categoria - cibo">
+                                    Tipo di articolo: <b><?php echo $ProductType -> getType(); ?></b><br>
+                                    Colore: <b><?php echo $ProductType -> getColor(); ?></b>
+                                </div>
+                                <div class="icona_categoria">
+                                    <div>
+                                        <img src="<?php echo $ProductType -> getAnimalType() -> getCategoryIcon();?>" alt="icona categoria - cibo">
+                                    </div>
+                                </div>
+                                <div>
+                                    Categoria: <b><?php echo $ProductType -> getAnimalType() -> getCategory();?></b>
                                 </div>
                             </div>
-                            <div>
-                                Categoria: <b><?php echo $ProductType -> getAnimalType() -> getCategory();?></b>
-                            </div>
                         </div>
-                    </div>
             <?php
+                    }
                 }
             ?>
         </div>
