@@ -1,19 +1,24 @@
 <?php
 
 class ProductType extends Product {
+    use Color;
+
     private $type;
     private $image;
     private AnimalType $animal_type;
 
     public function __construct(
         $name, $price,
-        $type, $image, AnimalType $animal_type
+        $type, $image, AnimalType $animal_type,
+        $color
         ) {
         parent :: __construct($name, $price);
 
         $this -> setType($type);
         $this -> setImage($image);
         $this -> setAnimalType($animal_type);
+
+        $this -> setColor($color);
     }
 
     public function getType() {

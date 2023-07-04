@@ -29,7 +29,8 @@
                                 </div>
                             </div>
                             <div>
-                                Tipo di articolo: <b><?php echo $ProductType -> getType(); ?></b>
+                                Tipo di articolo: <b><?php echo $ProductType -> getType(); ?></b><br>
+                                Colore: <b><?php echo $ProductType -> getColor(); ?></b>
                             </div>
                             <div class="icona_categoria">
                                 <div>
