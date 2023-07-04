@@ -1,17 +1,12 @@
 <?php
 
-class AnimalType extends Product {
+class AnimalType {
     private $category;
-    private ProductType $product_type;
+    private $categoryIcon;
 
-    public function __construct(
-            $name, $price,
-            $category, ProductType $product_type
-        ) {
-        parent :: __construct($name, $price);
-        
+    public function __construct($category, $categoryIcon) {
         $this -> setCategory($category);
-        $this -> setProductType($product_type);
+        $this -> setCategoryIcon($categoryIcon);
     }
 
     public function getCategory() {
@@ -21,10 +16,10 @@ class AnimalType extends Product {
         $this -> category = $category;
     }
 
-    public function getProductType() {
-        return $this -> product_type;
+    public function getCategoryIcon() {
+        return $this -> categoryIcon;
     }
-    public function setProductType($product_type) {
-        $this -> product_type = $product_type;
+    public function setCategoryIcon($categoryIcon) {
+        $this -> categoryIcon = $categoryIcon;
     }
 }

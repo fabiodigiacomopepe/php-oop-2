@@ -56,12 +56,14 @@ h1 {
 .icona_categoria {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+}
+
+.icona_categoria div {
+    width: 10%;
 }
 
 .icona_categoria img {
-    max-width: 10%;
+    max-width: 100%;
     border-radius: 5px;
-    position: relative;
-    bottom: 10px;
+    object-fit: cover;
 }
